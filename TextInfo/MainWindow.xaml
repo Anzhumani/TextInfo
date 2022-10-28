@@ -23,9 +23,9 @@
                 VerticalAlignment="Center" 
                 Height="47" 
                 Width="153"
-                Grid.Row="0"/>
+                Grid.Row="0" Click="Button_Click"/>
             
-            <TextBox x:Name="TextSplit"
+            <TextBox x:Name="TextPole"
                      HorizontalAlignment="Center" 
                      TextWrapping="Wrap" 
                      VerticalAlignment="Top"
@@ -36,24 +36,24 @@
                 HorizontalAlignment="Center" 
                 VerticalAlignment="Bottom" 
                 Height="30" 
-                Width="153" Grid.Row="1"/>
+                Width="153" Grid.Row="1" Click="Button_Click_4"/>
 
             <Button Content="Сортировать по возр." 
                 HorizontalAlignment="Center" 
                 VerticalAlignment="Center" 
                 Height="47" 
-                Width="153" Grid.Row="2"/>
+                Width="153" Grid.Row="2" Click="Button_Click_1"/>
             <Button Content="Сортировать по убыв." 
                 HorizontalAlignment="Center" 
                 VerticalAlignment="Center" 
                 Height="47" 
-                Width="153" Grid.Row="3"/>
+                Width="153" Grid.Row="3" Click="Button_Click_2"/>
 
             <Button Content="Информация" 
                 HorizontalAlignment="Center" 
                 VerticalAlignment="Center" 
                 Height="47" 
-                Width="153" Grid.Row="4"/>
+                Width="153" Grid.Row="4" Click="Button_Click_3"/>
 
             <Button Content="Сохранить файл" 
                 HorizontalAlignment="Center" 
