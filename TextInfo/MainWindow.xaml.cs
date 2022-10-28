@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
-using static System.Net.Mime.MediaTypeNames;
+
 
 namespace TextInfo
 {
@@ -38,26 +38,19 @@ namespace TextInfo
                 TextInput.Text = textInFile;
             }
         }
-        static string SortString(string input, bool reverse) // Этот метод выполняет сортировку строки. Если true - по убыванию, иначе - по возрастанию
-        {
-            char[] characters = input.ToArray();
-            Array.Sort(characters);
-            if (reverse)
-                Array.Reverse(characters);
-            return new string(characters);
-        }
+
 
         private void Button_Click_1(object sender, RoutedEventArgs e) // Сортировка по возрастанию
         {
             if(textInFile is not null)
-                textInFile = SortString(textInFile, false);
+                textInFile = Sorting.SortString(textInFile, false);
             TextInput.Text = textInFile;
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e) // Сортировка по убыванию
         {
             if (textInFile is not null)
-                textInFile = SortString(textInFile, true);
+                textInFile = Sorting.SortString(textInFile, true);
             TextInput.Text = textInFile;
         }
 
