@@ -5,8 +5,61 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TextInfo"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="400" Width="200">
     <Grid>
 
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Button Content="Выбрать файл" 
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Center" 
+                Height="47" 
+                Width="153"
+                Grid.Row="0"/>
+            
+            <TextBox x:Name="TextSplit"
+                     HorizontalAlignment="Center" 
+                     TextWrapping="Wrap" 
+                     VerticalAlignment="Top"
+                     Width="153" Height="29" 
+                     Margin="0,64,0,0" 
+                     Grid.RowSpan="2"/>
+            <Button Content="Найти элемент" 
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Bottom" 
+                Height="30" 
+                Width="153" Grid.Row="1"/>
+
+            <Button Content="Сортировать по возр." 
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Center" 
+                Height="47" 
+                Width="153" Grid.Row="2"/>
+            <Button Content="Сортировать по убыв." 
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Center" 
+                Height="47" 
+                Width="153" Grid.Row="3"/>
+
+            <Button Content="Информация" 
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Center" 
+                Height="47" 
+                Width="153" Grid.Row="4"/>
+
+            <Button Content="Сохранить файл" 
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Center" 
+                Height="47" 
+                Width="153" Grid.Row="5"/>
+        </Grid>
     </Grid>
 </Window>
