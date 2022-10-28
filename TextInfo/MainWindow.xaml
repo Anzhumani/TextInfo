@@ -23,7 +23,7 @@
                 VerticalAlignment="Center" 
                 Height="47" 
                 Width="153"
-                Grid.Row="0"/>
+                Grid.Row="0" Click="Button_Click"/>
             
             <TextBox x:Name="TextSplit"
                      HorizontalAlignment="Center" 

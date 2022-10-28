@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
 
 namespace TextInfo
 {
@@ -20,9 +21,20 @@ namespace TextInfo
     /// </summary>
     public partial class MainWindow : Window
     {
+        string textInFile = default;
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Microsoft.Win32.OpenFileDialog dialog = new Microsoft.Win32.OpenFileDialog();
+            bool? result = dialog.ShowDialog();
+            if (result == true)
+            {
+                textInFile = File.ReadAllText(dialog.FileName);
+            }
         }
     }
 }
