@@ -21,7 +21,7 @@ namespace TextInfo
     /// </summary>
     public partial class MainWindow : Window
     {
-        string textInFile = default;
+        string? textInFile = default;
         public MainWindow()
         {
             InitializeComponent();
@@ -35,6 +35,28 @@ namespace TextInfo
             {
                 textInFile = File.ReadAllText(dialog.FileName);
             }
+        }
+        static string SortString(string input, bool reverse)
+        {
+            char[] characters = input.ToArray();
+            Array.Sort(characters);
+            if (reverse)
+                Array.Reverse(characters);
+            return new string(characters);
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            if(textInFile is not null)
+                textInFile = SortString(textInFile, false);
+            MessageBox.Show(textInFile);
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            if (textInFile is not null)
+                textInFile = SortString(textInFile, true);
+            MessageBox.Show(textInFile);
         }
     }
 }
